@@ -11,4 +11,11 @@
 }
 
 
-@include font('Font', normal, normal, '../fonts/Font/Font.woff2');
+@include font('Manrope', normal, 300, '../fonts/Manrope-Light.woff2');
+
+@include font('Montserrat', normal, 400, '../fonts/Montserrat-Regular.woff2');
+@include font('Montserrat', normal, 500, '../fonts/Montserrat-Medium.woff2');
+@include font('Montserrat', normal, 600, '../fonts/Montserrat-SemiBold.woff2');
+
+@include font('OpenSans', normal, 400, '../fonts/OpenSans-Regular.woff2');
+@include font('OpenSans', normal, 600, '../fonts/OpenSans-SemiBold.woff2');
