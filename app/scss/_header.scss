@@ -4,6 +4,85 @@
 .header {
 	min-height: 100vh;
 	background-color: $dark_18;
+
+	.container {
+		background-image: url('../images/dest/header_bg.png');
+		background-repeat: no-repeat;
+		background-position: right center;
+
+		@media screen and (max-width: 939px) {
+			background-size: 400px;
+			background-position: 120% 110%;
+		}
+
+		@media screen and (max-width: 576px) {
+			background: none;
+		}
+
+
+		@media screen and (min-width: 940px) and (max-width: 1200px) {
+			background-position: 614px center;
+		}
+	}
+
+	&__content {
+		margin-top: 120px;
+		padding-top: 140px;
+		min-height: 640px;
+
+		@media screen and (max-width: 990px) {
+			padding-top: 100px;
+		}
+
+		@media screen and (max-width: 768px) {
+			padding-top: 50px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		position: relative;
+		font-size: 48px;
+		color: $blue_33;
+		font-weight: 700;
+		font-family: 'Montserrat';
+		text-transform: uppercase;
+
+		@media screen and (max-width: 576px) {
+			font-size: 40px;
+		}
+
+		&::before {
+			display: block;
+			content: 'Looking for';
+			position: absolute;
+			top: -55px;
+			left: 0;
+			font-size: 36px;
+			font-weight: bold;
+			text-transform: initial;
+			color: #f9f9f9;
+
+			@media screen and (max-width: 576px) {
+				top: -35px;
+				font-size: 30px;
+			}
+
+
+		}
+	}
+
+	&__text {
+		max-width: 530px;
+		font-family: 'OpenSans';
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 25px;
+
+		@media screen and (max-width: 576px) {
+			font-size: 16px;
+		}
+	}
 }
 
 .navbar {
@@ -18,9 +97,9 @@
 		 &::after {
 			display: block;
 			content: '';
-			width: calc(100% + 40px);
+			width: calc(100% + 20px);
 			height: 90px;
-			position: fixed;
+			position: absolute;
 			left: -20px;
 			z-index: 2;
 			background-color: #13151e;
