@@ -86,7 +86,7 @@ function styles() {
 function images() {
 	return src(paths.images.src)
 	.pipe(newer(paths.images.dest))
-	.pipe(imagemin())
+	//.pipe(imagemin())
 	.pipe(dest(paths.images.dest))
   .pipe(browserSync.stream())
 }
