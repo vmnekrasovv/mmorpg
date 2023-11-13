@@ -2,10 +2,14 @@
 
 
 .header {
-	min-height: 100vh;
+	height: 100vh;
+	max-height: 1080px;
 	background-color: $dark_18;
 
 	.container {
+		height: 100vh;
+		max-height: 1080px;
+		
 		background-image: url('../images/dest/header_bg.png');
 		background-repeat: no-repeat;
 		background-position: right center;
@@ -49,6 +53,10 @@
 		@media screen and (min-width: 991px) and (max-width: 1200px) {
 			background-position: 614px center;
 		}
+
+		@media screen and (max-height: 720px) {
+			background: none;
+		}
 	}
 
 	&__content {
@@ -67,6 +75,10 @@
 		@media screen and (max-width: 768px) {
 			margin-top: 100px;
 			padding-top: 0px;
+		}
+
+		@media screen and (max-height: 720px) {
+			min-height: 500px;
 		}
 	}
 
