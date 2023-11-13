@@ -45,9 +45,22 @@ body.lock {
 	padding: 0 20px;
 }
 
+.section {
+	padding: 120px 0;
+}
+
+.section__title {
+
+	margin-bottom: 90px;
+
+	font-size: 28px;
+	font-family: 'Montserrat';
+	font-weight: 500;
+	letter-spacing: .25px;
+	color: $white_e9;
+	text-align: center;
+}
+
 @import 'header';
 
-.s1 {
-	min-height: 100vh;
-	background-color: #333;
-}
+@import 'sections/section_1';
