@@ -1,0 +1,469 @@
+.s3 {
+	min-height: 100vh;
+	background-color: $dark_1e;
+
+	&__left-right {
+		display: flex;
+		justify-content: space-between;
+
+		@media screen and (max-width: 1200px) {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		@media screen and (max-width: 768px) {
+			padding: 10px;
+		}
+	}
+
+	&__left {
+		max-width: 700px;
+		display: flex;
+		flex-wrap: wrap;
+
+		@media screen and (max-width: 1200px) {
+			margin-bottom: 70px;
+		}
+
+		@media screen and (max-width: 768px) {
+			max-width: 100%;
+		}
+	}
+
+	&__right {
+		max-width: 370px;
+	}
+
+	&__info {
+		position: relative;
+		padding: 2px 20px 20px 20px;
+		margin-bottom: 80px;
+		width: 100%;
+
+		border-left: 1px solid #292c43;
+
+		@media screen and (max-width: 768px) {
+			padding-right: 0px;
+		}
+
+		@media screen and (max-width: 576px) {
+			padding-right: 20px;
+		}		
+
+		&:before {
+			display: flex;
+			position: absolute;
+		    top: -50px;
+		    left: -15px;
+			justify-content: center;
+			align-items: center;
+			content: '1';
+			width: 30px;
+			height: 30px;
+			border-radius: 30px;
+			background-color: rgba(115,122,174,.1);
+			color: $title_73;
+			font-family: 'Montserrat';
+			font-weight: 600;
+			font-size: 14px;
+		}
+
+		&:after {
+			display: block;
+			position: absolute;
+			top: -46px;
+			left: 30px;
+			content: 'Информация';
+			font-family: 'OpenSans';
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 24px;
+			letter-spacing: 1px;
+			color: $title_73;
+
+		}
+
+		&-title {
+			margin-bottom: 15px;
+			font-family: 'OpenSans';
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 24px;
+			letter-spacing: 1px;
+			color: $white_e9;
+		}
+
+		&-image {
+			display: block;
+			width: 100%;
+			border-radius: 5px 5px 0 0;
+
+			@media screen and (max-width: 576px) {
+				height: 200px;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+
+		&-name {
+			padding: 10px 15px;
+			font-family: 'Montserrat';
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 28px;
+			letter-spacing: .15px;
+			color: $white_f9;
+			background-color: $dark_23;
+			border-radius: 0 0 5px 5px;
+		}
+
+	} // info
+
+	&__product {
+		padding: 0 0 25px 0;
+		border-bottom: 1px solid #292c43;
+	}
+
+	&__mails {
+		padding-top: 20px;
+		display: flex;
+		justify-content: space-between;
+
+		@media screen and (max-width: 576px) {
+			flex-wrap: wrap;
+  		  	justify-content: center;
+		}
+	}
+
+	&__mail {
+
+		@media screen and (max-width: 768px) {
+			width: 40%;
+		}
+
+		@media screen and (max-width: 576px) {
+			width: 70%;
+			margin-bottom: 20px;
+		}
+
+		@media screen and (max-width: 420px) {
+			width: 100%;
+		}
+
+		&-title {
+			margin-bottom: 10px;
+			font-family: 'OpenSans';
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 20px;
+			letter-spacing: .1px;
+			color: rgba(115,122,174,.5);
+		}
+
+		&-input {
+			
+			position: relative;
+
+			input {
+				width: 310px;
+				height: 40px;
+				padding: 10px 30px 10px 15px;
+				border-radius: 5px;
+				background-color: $dark_3b;
+				color: $white_e9;
+				font-family: 'OpenSans';
+				font-weight: 400;
+				font-size: 13px;
+				line-height: 20px;
+				letter-spacing: .5px;
+				transition: .3s;
+				border: 1px solid rgba(115,122,174,.5);
+
+				&:focus {
+					border: 1px solid $blue_33;
+				}
+
+				@media screen and (max-width: 768px) {
+					width: 100%;
+				}
+			}
+
+			&:after {
+				display: block;
+				content: '';
+				width: 10px;
+				height: 10px;
+				position: absolute;
+    			top: calc(50% - 5px);
+    			right: 15px;
+				background-color: #fff;
+				transform: rotate(45deg);
+			}
+
+			&.ok:after {
+				background-color: $green_6c;
+			}
+
+			&.err:after {
+				background-color: $red_f6;
+			}
+
+		} // &__mail-input
+
+	} // mail
+
+	// ------ info 
+
+
+	&__type {
+		position: relative;
+		padding: 20px;
+		width: 50%;
+		display: inline-flex;
+		gap: 25px;
+		border-left: 1px solid #292c43;
+
+		@media screen and (max-width: 1200px) {
+			width: 50%;
+		}
+
+		@media screen and (max-width: 576px) {
+			justify-content: center;
+			width: 100%;
+   			margin-bottom: 80px;
+
+		}
+
+		&-item {
+			padding: 15px 25px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-family: 'OpenSans';
+			font-weight: 400;
+			font-size: 13px;
+			line-height: 20px;
+			letter-spacing: .5px;
+			color: $white_e9;
+			text-decoration: none;
+			border-radius: 5px;
+			background-color: $dark_3b;
+			transition: .3s;
+
+			&:hover {
+				background-color: $blue_33;
+			}
+		}
+
+		&:before {
+			display: flex;
+			position: absolute;
+		    top: -50px;
+		    left: -15px;
+			justify-content: center;
+			align-items: center;
+			content: '2';
+			width: 30px;
+			height: 30px;
+			border-radius: 30px;
+			background-color: rgba(115,122,174,.1);
+			color: $title_73;
+			font-family: 'Montserrat';
+			font-weight: 600;
+			font-size: 14px;
+		}
+
+		&:after {
+			display: block;
+			position: absolute;
+			top: -46px;
+			left: 30px;
+			content: 'Тип подписки';
+			font-family: 'OpenSans';
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 24px;
+			letter-spacing: 1px;
+			color: $title_73;
+		}
+
+	} // &__type
+
+
+	&__payment {
+		position: relative;
+		padding: 20px;
+		width: 50%;
+		display: inline-flex;
+		justify-content: flex-end;
+		gap: 25px;
+		border-left: 1px solid #292c43;
+
+		@media screen and (max-width: 768px) {
+			padding-right: 0;
+		}
+
+		@media screen and (max-width: 576px) {
+			justify-content: center;
+		    width: 100%;
+		    padding-right: 20px;
+		}
+
+		&-item {
+			padding: 15px 35px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-family: 'OpenSans';
+			font-weight: 400;
+			font-size: 13px;
+			line-height: 20px;
+			letter-spacing: .5px;
+			color: $white_e9;
+			text-decoration: none;
+			border-radius: 5px;
+			background-color: $dark_3b;
+			transition: .3s;
+
+			&:hover {
+				background-color: $blue_33;
+			}
+		}
+
+		&:before {
+			display: flex;
+			position: absolute;
+		    top: -50px;
+		    left: -15px;
+			justify-content: center;
+			align-items: center;
+			content: '3';
+			width: 30px;
+			height: 30px;
+			border-radius: 30px;
+			background-color: rgba(115,122,174,.1);
+			color: $title_73;
+			font-family: 'Montserrat';
+			font-weight: 600;
+			font-size: 14px;
+		}
+
+		&:after {
+			display: block;
+			position: absolute;
+			top: -46px;
+			left: 30px;
+			content: 'Платежная система';
+			font-family: 'OpenSans';
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 24px;
+			letter-spacing: 1px;
+			color: $title_73;
+		}
+
+	} // &__payment
+
+	.order {
+
+		margin-top: 10px;
+
+		&-block {
+			padding: 25px 30px;
+			border-radius: 5px;
+			background-color: $dark_23;
+			margin-bottom: 20px;
+		}
+
+		&__title {
+			padding-bottom: 10px;
+			margin-bottom: 20px;
+			font-family: 'OpenSans';
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 24px;
+			letter-spacing: 1px;
+			color: $title_73;
+			text-align: center;
+			border-bottom: 1px solid $dark_2d;
+		}
+
+		&__email {
+			display: flex;
+			justify-content: space-between;
+			padding-bottom: 20px;
+			border-bottom: 1px solid $dark_2d;
+			margin-bottom: 20px;
+		}
+
+		&__label {
+			font-family: 'OpenSans';
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 20px;
+			letter-spacing: .5px;
+			color: $title_73;
+		}
+
+		&__email-val {
+			font-family: 'OpenSans';
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 20px;
+			letter-spacing: .5px;
+			color: $blue_33;
+			text-align: right;
+		}
+
+		&__cost-val {
+			font-family: 'Montserrat';
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 30px;
+			letter-spacing: .15px;
+			color: $white_e9;
+			text-align: right;
+		}
+
+		&__cost {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+		}
+
+		&__button {
+			padding: 10px;
+			display: flex;
+			justify-content: center;
+			align: center;
+			background-color: $green_6c;
+			font-family: 'OpenSans';
+			font-weight: 600;
+			font-size: 13px;
+			line-height: 24px;
+			letter-spacing: .1px;
+			color: $black_15;
+			text-decoration: none;
+			border-radius: 5px;
+		}
+
+		&__agree {
+			font-family: 'OpenSans';
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 20px;
+			letter-spacing: .5px;
+			color: $title_73;
+			text-align: center;
+
+			&-link {
+				text-decoration: none;
+				color: $blue_33;
+			}
+		}
+
+	} // order
+
+} // s3
