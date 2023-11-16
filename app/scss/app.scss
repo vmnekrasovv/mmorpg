@@ -19,7 +19,19 @@ html, body {
 	font-family: 'OpenSans';
 	font-weight: 400;
 	color: $text_73;
+	background-color: $dark_18;
 }
+
+body.navbar-fixed {
+	@media screen and (max-width: 990px) {
+		margin-top: -100px;
+	}
+}
+
+
+body.navbar-rollback {
+	animation: bodyRollBack .3s forwards;
+} 
 
 body.lock {
 	overflow: hidden;
