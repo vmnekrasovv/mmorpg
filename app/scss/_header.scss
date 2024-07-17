@@ -16,7 +16,7 @@
 		
 		background-image: url('../images/dest/header_bg.png');
 		background-repeat: no-repeat;
-		background-position: right center;
+		background-position: right bottom;
 
 		@media screen and (max-width: 899px) {
 			background-size: 450px;
@@ -51,15 +51,29 @@
 
 
 		@media screen and (min-width: 900px) and (max-width: 990px) {
-			background-position: 550px center;
+			background-position: 550px bottom;
 		}
 
 		@media screen and (min-width: 991px) and (max-width: 1200px) {
-			background-position: 614px center;
+			background-position: 614px bottom;
 		}
 
-		@media screen and (max-height: 720px) {
-			background: none;
+
+		@media screen and (max-height: 850px) {
+			background-position: right bottom;
+			background-size: 550px;
+		}
+
+		@media screen and (max-height: 750px) {
+			background-size: 500px;
+		}
+
+		@media screen and (max-height: 650px) {
+			background-size: 470px;
+		}
+
+		@media screen and (max-height: 550px) {
+			background-size: 420px;
 		}
 	}
 
