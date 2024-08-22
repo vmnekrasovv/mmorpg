@@ -252,7 +252,7 @@
     background: url('../images/dest/logo.svg') no-repeat center;
     background-size: contain;
 
-    @media (orientation: portrait) {
+    @media (orientation: portrait) and (max-width: 767px){
     	width: calc(var(--index) * 10);
     	height: calc(var(--index) * 4);
     }
