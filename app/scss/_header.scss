@@ -244,12 +244,18 @@
 }
 
 .logo {
+	
 	width: calc(var(--index)* 8);
-    height: calc(var(--index)* 4);
+    height: calc(var(--index)* 5);
     position: relative;
     z-index: 3;
     background: url('../images/dest/logo.svg') no-repeat center;
     background-size: contain;
+
+    @media (orientation: portrait) {
+    	width: calc(var(--index) * 10);
+    	height: calc(var(--index) * 4);
+    }
 }
 
 
