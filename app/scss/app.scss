@@ -22,16 +22,19 @@ html, body {
 	background-color: $dark_18;
 }
 
-body.navbar-fixed {
-	@media screen and (max-width: 990px) {
-		margin-top: -100px;
+/*
+	body.navbar-fixed {
+		@media screen and (max-width: 990px) {
+			margin-top: -100px;
+		}
 	}
-}
 
 
-body.navbar-rollback {
-	animation: bodyRollBack .3s forwards;
-} 
+	body.navbar-rollback {
+		animation: bodyRollBack .3s forwards;
+	} 
+
+*/
 
 body.lock {
 	overflow: hidden;
@@ -54,7 +57,7 @@ body.lock {
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 20px;
+	padding: 0 calc(var(--index) * .7);
 }
 
 .section {

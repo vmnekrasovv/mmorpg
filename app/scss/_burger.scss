@@ -1,23 +1,24 @@
 /* --------- burger --------- */
 
 .burger {
-	display: none;
-	position: relative;
-	width: 30px;
-	height: 20px;
-	z-index: 3;
-	cursor: pointer;
 
-	@media screen and (max-width: 767px) {
+	width: calc(var(--index)* 3.5);
+	height: 5vh;
+    position: relative;
+    cursor: pointer;
+    z-index: 3;
+    display: none;
+
+	@media (max-width: 767px) {
 		display: flex;
 		align-self: center;
 	}
 
 	&__element {
 		width: 100%;
-		height: 2px;
+		height: 1vh;
 		position: absolute;
-		top: 9px;
+		top: 2vh;
 		left: 0;
 		background-color: $text_73;
 	}
@@ -25,11 +26,12 @@
 	&:before,
 	&:after {
 		width: 100%;
-		height: 2px;
+		height: 1vh;
 		position: absolute;
 		left: 0;
 		background-color: $text_73;
 		content: '';
+		display: block;
 	}
 
 	&:hover::before,
@@ -46,12 +48,13 @@
 
 	&.active:before {
 		transform: rotate(45deg);
-		top: 9px;
+		top: 2vh;
 	}
 
 	&.active:after {
 		transform: rotate(-45deg);
-		bottom: 9px;
+		bottom: 2vh;
+
 	}
 
 	&.active span {

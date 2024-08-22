@@ -2,167 +2,66 @@
 
 
 .header {
-	height: 100vh;
-	max-height: 1080px;
+	min-height: 100vh;
 	background-color: $dark_18;
 
 	& > .container {
+		max-width: 100%;
 		padding: 0;
+		min-height: 100vh;
+	    background-image: url('../images/dest/header_bg.png');
+	    background-repeat: no-repeat;
+	    background-position: right bottom;
+	    background-size: calc(var(--index) * 22);
 	}
 
-	& > .container {
-		height: 100vh;
-		max-height: 1080px;
-		
-		background-image: url('../images/dest/header_bg.png');
-		background-repeat: no-repeat;
-		background-position: right bottom;
-
-		@media screen and (max-width: 899px) {
-			background-size: 450px;
-			background-position: 120% 110%;
-		}
-
-		@media screen and (max-width: 768px) {
-			background-size: 400px;
-		}
-
-		@media screen and (max-width: 576px) {
-			background-size: 350px;
-			background-position: 270px 120%;
-		}
-
-		@media screen and (max-width: 520px) {
-			background-position: 250px 120%;
-		}
-
-		@media screen and (max-width: 450px) {
-			background-position: 180px 120%;
-		}
-
-		@media screen and (max-width: 420px) {
-			background-position: 180px 130%;
-		}
-
-		@media screen and (max-width: 375px) {
-			background-size: 300px;
-			background-position: 180px 120%;
-		}
-
-
-		@media screen and (min-width: 900px) and (max-width: 990px) {
-			background-position: 550px bottom;
-		}
-
-		@media screen and (min-width: 991px) and (max-width: 1200px) {
-			background-position: 614px bottom;
-		}
-
-
-		@media screen and (max-height: 850px) {
-			background-position: right bottom;
-			background-size: 550px;
-		}
-
-		@media screen and (max-height: 750px) {
-			background-size: 500px;
-		}
-
-		@media screen and (max-height: 650px) {
-			background-size: 470px;
-		}
-
-		@media screen and (max-height: 550px) {
-			background-size: 420px;
-		}
+	& .container {
+		max-width: 100%;
 	}
 
 	&__content {
-		margin-top: 120px;
-		padding-top: 140px;
-		min-height: 640px;
+		margin-top: calc(var(--index) * 10);
+		min-height: calc(var(--index) * 15);
 
-		@media screen and (max-width: 990px) {
-			margin-top: 100px;
-			padding-top: 100px;
-		}
-
-		@media screen and (max-width: 900px) {
-			padding-top: 50px;
-		}
-
-		@media screen and (max-width: 768px) {
-			padding-top: 0px;
-		}
-
-		@media screen and (max-height: 720px) {
-			min-height: 500px;
+		@media (orientation:portrait) {
+			margin-top: calc(var(--index) * 12);
 		}
 	}
 
 	&__title {
-		margin-bottom: 30px;
+		margin-bottom: calc(var(--index) * 1.5);
 		position: relative;
-		font-size: 48px;
+		font-size: calc(var(--index) * 2.5);
 		font-weight: 700;
 		font-family: 'Montserrat';
 		text-transform: uppercase;
 		color: $blue_33;
 
-		@media screen and (max-width: 576px) {
-			font-size: 40px;
-		}
-
 		&::before {
 			display: block;
 			content: 'Looking for';
 			position: absolute;
-			top: -55px;
+			top: -70%;
 			left: 0;
-			font-size: 36px;
+			font-size: calc(var(--index) * 2);
 			font-weight: bold;
 			text-transform: initial;
 			color: #f9f9f9;
-
-			@media screen and (max-width: 900px) {
-				top: -45px;
-			}
-
-			@media screen and (max-width: 576px) {
-				top: -40px;
-				font-size: 30px;
-			}
-
-
 		}
 	}
 
 	&__text {
-		max-width: 530px;
-		margin-bottom: 25px;
+		max-width: calc(var(--index) * 29);
+		margin-bottom: calc(var(--index) * 2);
 
 		font-family: 'OpenSans';
 		font-weight: 400;
-		font-size: 18px;
-		line-height: 25px;
-
-		@media screen and (max-width: 990px) {
-			max-width: 400px;
-		}
-
-		@media screen and (max-width: 768px) {
-			max-width: 470px;
-			font-size: 16px;
-		}
-
-		@media screen and (max-width: 576px) {
-			max-width: 350px;
-			font-size: 15px;
-		}
+		font-size: calc(var(--index));
 	}
 
 	.games {
-		margin-bottom: 50px;
+		display: none;
+		margin-bottom: calc(var(--index) * 3.7);
 
 		&__list {
 			display: inline-flex;
@@ -171,9 +70,9 @@
 		}
 
 		&__item {
-			width: 40px;
-			height: 40px;
-			border-radius: 5px;
+			width: calc(var(--index) * 1.2);
+			height: calc(var(--index) * 1.2);
+			border-radius: calc(var(--index) * .2);
 			background-color: $dark_23;
 			transition: .3s;
 
@@ -235,8 +134,8 @@
 	} // games
 
 	&-content__buttons {
-		display: inline-flex;
-		gap: 20px;
+		display: flex;
+		gap: calc(var(--index) * 0.5);
 	}
 
 	&-content__button {
@@ -244,21 +143,25 @@
 		justify-content: center;
 		align-items: center;
 		
-		padding: 10px 20px;
-		border-radius: 5px;
+		padding: calc(var(--index) * .9) calc(var(--index) * 1.8);
+		border-radius: calc(var(--index) * 0.2);
 		background-color: $dark_23;
 		
 		color: $text_73;
-		font-size: 13px;
+		font-size: calc(var(--index) * 0.7);
 		font-weight: 600;
 		font-family: 'OpenSans';
 		text-decoration: none;
 
-		transition: .3s;
+		transition: background .3s;
 
 		&:hover {
 			background-color: $blue_33;
 			color: #fff;
+		}
+
+		@media (orientation:portrait) {
+			font-size: calc(var(--index));
 		}
 
 	}
@@ -273,135 +176,138 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: 90px;
+		padding: calc(var(--index) * .7);
 	}
 
-	@media screen and (max-width: 990px) {
+	/*
 
-		&.fixed {
-			width: 100%;
-			height: 90px;
-			position: fixed;
-			top: -100px;
-			left: 0;
-			z-index: 1;
-			animation: navbarFixed .3s forwards;
-		}
+		@media (max-width: 990px) {
 
-		@keyframes navbarFixed {
-			100% {
-				top: 0px;
-			}
-		}
-
-
-		&.rollback {
-			width: 100%;
-			height: 90px;
-			top: 0;
-			left: 0;
-			position: fixed;
-			z-index: 1;
-			animation: navbarRollBack .3s forwards;
-		}
-
-		@keyframes navbarRollBack {
-
-			99% {
+			&.fixed {
+				width: 100%;
+				height: 10vh;
 				position: fixed;
-				top: -100px;
+				top: -10vh;
+				left: 0;
+				z-index: 1;
+				animation: navbarFixed .3s forwards;
 			}
 
-			100% {
-				position: relative;
+			@keyframes navbarFixed {
+				100% {
+					top: 0px;
+				}
+			}
+
+
+			&.rollback {
+				width: 100%;
+				height: 10vh;
 				top: 0;
-			}
-		}
-	 
-
-		@keyframes bodyRollBack {
-			0% {
-				margin-top: -100px;
+				left: 0;
+				position: fixed;
+				z-index: 1;
+				animation: navbarRollBack .3s forwards;
 			}
 
-			99% {
-				margin-top: -100px;
-			}		
+			@keyframes navbarRollBack {
 
-			100% {
-				margin-top: 0;
+				99% {
+					position: fixed;
+					top: -10vh;
+				}
+
+				100% {
+					position: relative;
+					top: 0;
+				}
 			}
+		 
+
+			@keyframes bodyRollBack {
+				0% {
+					margin-top: -10vh;
+				}
+
+				99% {
+					margin-top: -10vh;
+				}		
+
+				100% {
+					margin-top: 0;
+				}
+			} 
 		} 
-	} // @media max-width: 990px
+
+	*/
 
 }
 
 .logo {
-	width: 103px;
-	height: 38px;
-	position: relative;
-	z-index: 3;
-	background: url('../images/dest/logo.svg') no-repeat center;
+	width: calc(var(--index)* 8);
+    height: calc(var(--index)* 4);
+    position: relative;
+    z-index: 3;
+    background: url('../images/dest/logo.svg') no-repeat center;
+    background-size: contain;
 }
 
 
 .header-menu {
 
-	margin-left: 90px;
+	margin-left: calc(var(--index) * .8);
+	margin-right: calc(var(--index) * .8);
 
 	display: flex;
 	align-items: center;
-	gap: 15px;
+	gap: calc(var(--index) * .8);
 
 	&.active {
 		top: 0;
 	}
 	
-	@media screen and (max-width: 767px) {
+	@media (max-width: 767px) {
 		margin-left: 0;
-	    position: fixed;
-	    top: -110vh;
-	    left: 0;
-	    width: 100%;
-	    height: 110vh;
-	    overflow: auto;
-	    padding: 0px 10px 100px 5px;
-	    background-color: #13151e;
-	    -webkit-transition: .3s;
-	    transition: .3s;
-	    z-index: 1;
-    	flex-direction: column;
-    	justify-content: center;
+        position: fixed;
+        top: -110vh;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: auto;
+        padding: 0;
+        background-color: #13151e;
+        transition: .3s;
+        z-index: 1;
+        flex-direction: column;
+        justify-content: center;
 
 	}
 
 	&__link {
 		
-		padding: 5px 15px;
+		padding: calc(var(--index) * .8) calc(var(--index) * .16);
 		color: $text_73;
 		font-weight: 600;
 		font-family: 'OpenSans';
 		text-decoration: none;
+		font-size: calc(var(--index));
 
 		&.active {
 			color: $blue_33;
 		}
 		
-		@media screen and (max-width: 767px) {
-			width: 100%;
-			padding-bottom: 30px;
-			font-size: 20px;
-		    text-align: center;
-		    border-bottom: 2px solid $dark_1e;
+		@media (max-width: 767px) {
+			width: 50%;
+			padding-bottom: calc(var(--index)* 2);
+        	font-size: calc(var(--index)* 1.5);
+			text-align: center;
+			border-bottom: 2px solid $dark_1e;
 		}
 		
 
 		&:last-child {
-			padding-right: 0;
-
-			@media screen and (max-width: 767px) {
-				border-bottom: none;
-			}
+			padding-right: 0px;
+			border-bottom: none;
 		}
 
 	}
