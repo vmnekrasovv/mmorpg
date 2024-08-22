@@ -13,7 +13,11 @@
 	    background-repeat: no-repeat;
 	    background-position: right bottom;
 	    background-size: calc(var(--index) * 24);
-		}
+
+	    @media (orientation: portrait) {
+	    	background-position: calc(100vw / 2.5) calc(100vh / 2);
+	  		background-size: calc(var(--index) * 33);
+	    }
 
 	}
 
