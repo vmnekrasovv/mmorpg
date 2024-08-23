@@ -42,6 +42,7 @@
 		font-family: 'Montserrat';
 		text-transform: uppercase;
 		color: $blue_33;
+		text-shadow: .1vw .3vh #000;
 
 		&::before {
 			display: block;
