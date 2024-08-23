@@ -47,7 +47,7 @@ body.lock {
 :root {
 	--index: calc(1vw + 1vh);
 	--text: #fff;
-	--transition: .33s;
+	--transition: .2s;
 }
 
 /* .content {
@@ -55,25 +55,32 @@ body.lock {
 } */
 
 .container {
-	max-width: 1200px;
+	max-width: 70vw;
 	margin: 0 auto;
 	padding: 0 var(--index);
+
+	@media (max-width: 1600px) {
+		max-width: 1200px;
+	}
 }
 
 .section {
-	padding: 120px 0;
+	padding: calc(var(--index) * 4) 0 calc(var(--index) * 7);
+
+	@media (max-width: 990px) {
+		padding: calc(var(--index) * 4) 0 calc(var(--index) * 5);
+	}
 }
 
 .section__title {
-
-	margin-bottom: 90px;
-
-	font-size: 28px;
+	margin-bottom: calc(var(--index) * 5);
+	font-size: calc(var(--index) * 1.8);
 	font-family: 'Montserrat';
 	font-weight: 500;
 	letter-spacing: .25px;
 	color: $white_e9;
 	text-align: center;
+	text-transform: uppercase;
 }
 
 @import 'header';
