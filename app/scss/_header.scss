@@ -325,7 +325,7 @@
 			padding-bottom: calc(var(--index)* 2);
         	font-size: calc(var(--index)* 1.7);
 			text-align: center;
-			border-bottom: 2px solid $dark_1e;
+			border-bottom: calc(var(--index)* .4) solid $dark_1e;
 		}
 		
 
