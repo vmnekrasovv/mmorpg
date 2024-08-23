@@ -275,6 +275,10 @@
 
 	&.active {
 		top: 0;
+
+		@media (max-width: 767px) and (orientation: portrait) {
+			top: -5vh;
+		}
 	}
 	
 	@media (max-width: 767px) {
@@ -292,6 +296,11 @@
         flex-direction: column;
         justify-content: center;
 
+	}
+
+	@media (max-width: 767px) and (orientation: portrait) {
+		height: 105vh;
+		top: -105vh;
 	}
 
 	&__link {
