@@ -57,7 +57,7 @@ body.lock {
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 calc(var(--index) * .7);
+	padding: 0 var(--index);
 }
 
 .section {

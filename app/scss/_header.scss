@@ -7,18 +7,18 @@
 
 	& > .container {
 		max-width: 100%;
-		padding: 0;
 		min-height: 100vh;
+		padding: calc(var(--index) * .8) 0 0 0;
 	    background-image: url('../images/dest/header_bg.png');
 	    background-repeat: no-repeat;
 	    background-position: right bottom;
 	    background-size: calc(var(--index) * 24);
 
 	    @media (orientation: portrait) {
+	    	padding: calc(var(--index) * .8) calc(var(--index) * .4) 0 calc(var(--index) * .4);
 	    	background-position: calc(100vw / 2.5) calc(100vh / 2);
 	  		background-size: calc(var(--index) * 33);
 	    }
-
 	}
 
 	& .container {
@@ -182,7 +182,6 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: calc(var(--index) * .7);
 	}
 
 	/*
