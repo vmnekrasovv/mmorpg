@@ -260,7 +260,7 @@
 
     @media (orientation: portrait) and (max-width: 767px){
     	width: calc(var(--index) * 10);
-    	height: calc(var(--index) * 4);
+    	height: calc(var(--index) * 4.5);
     }
 }
 
@@ -281,14 +281,14 @@
 	@media (max-width: 767px) {
 		margin-left: 0;
         position: fixed;
-        top: -110vh;
+        top: -100vh;
         left: 0;
         width: 100%;
         height: 100vh;
         overflow: auto;
         padding: 0;
         background-color: #13151e;
-        transition: .3s;
+        transition: .2s;
         z-index: 1;
         flex-direction: column;
         justify-content: center;
@@ -304,8 +304,21 @@
 		text-decoration: none;
 		font-size: calc(var(--index));
 
+		&:hover {
+			color: #3f65bd;
+		}
+
 		&.active {
+			
 			color: $blue_33;
+			
+			@media (max-width: 767px) {
+				border-bottom-color: $blue_33; 
+			}
+
+			&:hover {
+				cursor: default;
+			}
 		}
 		
 		@media (max-width: 767px) {
