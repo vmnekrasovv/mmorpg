@@ -18,7 +18,7 @@
 	&__item {
 		width: 30%;
 		padding: 2vw 2vh;
-		margin-bottom: 10vh;
+		margin-bottom: 7vh;
 		transition: var(--transition);
 		display: flex;
 		flex-direction: column;
@@ -27,15 +27,46 @@
 		align-items: center;
 		font-family: 'Montserrat';
 
-		@media (max-width: 576px) {
-			height: 90vh;
-			width: 90%;
-			margin-bottom: 4vh;
+
+		&:nth-child(odd) {
+
 			background-color: #191b29;
 
-			&:nth-child(odd) {
-				background-color: #191b29;
+			@media (min-width: 577px) and (max-width: 990px) {
+				background: transparent;
 			}
+		}
+
+
+		&:nth-child(3n+1),
+		&:nth-child(3n+5) {
+			
+			@media (min-width: 577px) and (max-width: 990px) {
+				background-color: #191b29;
+			}			
+		}
+
+		@media (max-width: 990px) {
+			width: 49%;
+			margin-bottom: 4vh;
+		}
+
+		@media (max-width: 576px) {
+			height: 44vh;
+			width: 90%;
+			margin-bottom: 4vh;
+		}
+
+		@media (max-width: 990px) and (orientation: landscape) {
+			height: 50vh;
+		}
+
+		@media (max-width: 576px) and (orientation: landscape) {
+			height: 50vh;
+		}
+
+		@media (max-width: 990px) and (orientation: portrait) {
+			height: 50vh;
 		}
 
 		&:hover {
@@ -49,6 +80,7 @@
 			margin-bottom: 3vh;
 			background-size: 100%;
 			background-repeat: no-repeat;
+			background-size: 100%;
 
 			&.item-icon-1 { background-image: url('../images/dest/s1_icons/1.svg') }
 			&.item-icon-2 { background-image: url('../images/dest/s1_icons/2.svg') }
@@ -58,14 +90,14 @@
 			&.item-icon-6 { background-image: url('../images/dest/s1_icons/3.svg') }
 		
 			@media (max-width: 576px) {
-				width: 9vw;
-				height: 20vh;
+				width: calc(var(--index) * 5);
+				height: calc(var(--index) * 5);
 			}
 		}
 
 		&-title {
 
-			margin-bottom: calc(var(--index) * 1.2);
+			margin-bottom: calc(var(--index) * .5);
 		    font-weight: 500;
 		    line-height: calc(var(--index));
 		    letter-spacing: .15px;
