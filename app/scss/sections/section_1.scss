@@ -65,6 +65,10 @@
 			height: 90vh;
 		}
 
+		@media (min-width: 576px) and (max-width: 990px) {
+			height: 80vh;
+		}
+
 
 		&:hover {
 			background-color: $s1_item;
@@ -86,10 +90,19 @@
 			&.item-icon-5 { background-image: url('../images/dest/s1_icons/2.svg') }
 			&.item-icon-6 { background-image: url('../images/dest/s1_icons/3.svg') }
 		
-			@media (max-width: 576px) {
+
+			@media (max-width: 768px) {
 				width: calc(var(--index) * 5);
 				height: calc(var(--index) * 5);
+				margin-bottom: 5vh;
 			}
+
+			@media (max-width: 576px) {
+				width: calc(var(--index) * 7);
+				height: calc(var(--index) * 7);
+
+			}
+
 		}
 
 		&-title {
@@ -100,6 +113,12 @@
 		    letter-spacing: .15px;
 		    color: rgba(233, 235, 249, .95);
 		    font-size: calc(var(--index));
+
+		  	@media (max-width: 768px) {
+		  		margin-bottom: calc(var(--index)* 1.2);
+			    line-height: calc(var(--index));
+			    font-size: calc(var(--index)* 2);
+		  	}
 
 		} // title
 
@@ -114,6 +133,11 @@
 		    letter-spacing: .2px;
 		    color: #737aae;
 		    text-align: center;
+
+		    @media (max-width: 768px) {
+    			font-size: calc(var(--index)* .9);
+    			line-height: calc(var(--index)* 1.25);
+		    }
 
 		    @media (max-width: 576px) {
 		    	width: 49%;
