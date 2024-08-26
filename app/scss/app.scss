@@ -55,12 +55,12 @@ body.lock {
 } */
 
 .container {
-	max-width: 70vw;
+	max-width: 80vw;
 	margin: 0 auto;
 	padding: 0 var(--index);
 
 	@media (max-width: 1600px) {
-		max-width: 1200px;
+		max-width: 1400px;
 	}
 }
 
