@@ -20,6 +20,8 @@
 
 	&__col {
 
+
+
 		@media screen and (min-width: 769px) {
 			&:last-child {
 				text-align: right;
@@ -31,6 +33,13 @@
 				width: 100%;
 				margin-bottom: 40px;
 			}
+		}
+
+		@media (min-width: 990px) {
+			display: flex;
+			align-items: center;
+			margin-bottom: 0;
+			gap: 10px;
 		}
 	}
 
@@ -53,9 +62,19 @@
 		font-size: 14px;
 		color: rgba(115,122,174,.5);
 		margin-bottom: 30px;
+
+		@media (min-width: 990px) {
+			margin-bottom: 0;
+		}
 	}
 
 	&__nav {
+		@media (min-width: 990px) {
+			display: flex;
+			align-items: center;
+			margin-bottom: 0;
+			gap: 10px;
+		}
 	}
 
 	&__link {
@@ -68,6 +87,10 @@
 		text-decoration: none;
 
 		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@media (min-width: 990px) {
 			margin-bottom: 0;
 		}
 	}

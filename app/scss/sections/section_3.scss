@@ -17,7 +17,8 @@
 	}
 
 	&__left {
-		max-width: 700px;
+		max-width: 70%;
+		width: 70%;
 		display: flex;
 		flex-wrap: wrap;
 
@@ -31,7 +32,8 @@
 	}
 
 	&__right {
-		max-width: 370px;
+		max-width: 30%;
+		width: 30%;
 	}
 
 	&__info {
@@ -376,12 +378,12 @@
 		}
 
 		&__title {
-			padding-bottom: 10px;
+			padding: calc(var(--index));
 			margin-bottom: 20px;
 			font-family: 'OpenSans';
 			font-weight: 400;
-			font-size: 15px;
-			line-height: 24px;
+			font-size: calc(var(--index));
+			line-height: calc(var(--index));
 			letter-spacing: 1px;
 			color: $title_73;
 			text-align: center;
@@ -391,15 +393,16 @@
 		&__email {
 			display: flex;
 			justify-content: space-between;
-			padding-bottom: 20px;
+			padding: calc(var(--index)) 0 calc(var(--index)) 0;
 			border-bottom: 1px solid $dark_2d;
 			margin-bottom: 20px;
+			font-size: calc(var(--index));
 		}
 
 		&__label {
 			font-family: 'OpenSans';
 			font-weight: 400;
-			font-size: 14px;
+			font-size: calc(var(--index) * .5);
 			line-height: 20px;
 			letter-spacing: .5px;
 			color: $title_73;
@@ -408,7 +411,7 @@
 		&__email-val {
 			font-family: 'OpenSans';
 			font-weight: 400;
-			font-size: 14px;
+			font-size: calc(var(--index) * .5);
 			line-height: 20px;
 			letter-spacing: .5px;
 			color: $blue_33;
@@ -418,7 +421,7 @@
 		&__cost-val {
 			font-family: 'Montserrat';
 			font-weight: 500;
-			font-size: 20px;
+			font-size: calc(var(--index) * .5);
 			line-height: 30px;
 			letter-spacing: .15px;
 			color: $white_e9;
@@ -429,19 +432,19 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			padding-bottom: 20px;
+			padding: calc(var(--index) * .5) 0;
 			margin-bottom: 20px;
 		}
 
 		&__button {
-			padding: 10px;
+			padding: calc(var(--index) * .7);
 			display: flex;
 			justify-content: center;
 			align: center;
 			background-color: $green_6c;
 			font-family: 'OpenSans';
 			font-weight: 600;
-			font-size: 13px;
+			font-size: calc(var(--index) * .7);
 			line-height: 24px;
 			letter-spacing: .1px;
 			color: $black_15;
@@ -452,7 +455,7 @@
 		&__agree {
 			font-family: 'OpenSans';
 			font-weight: 400;
-			font-size: 14px;
+			font-size: calc(var(--index) * .4);
 			line-height: 20px;
 			letter-spacing: .5px;
 			color: $title_73;
