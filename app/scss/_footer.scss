@@ -4,6 +4,7 @@
 	background-color: $dark_23;
 
 	&__cols {
+		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -11,8 +12,6 @@
 		flex-wrap: wrap;
 
 		@media (max-width: 768px) {
-			justify-content: flex-start;
-			display: inline-flex;
 			gap: calc(var(--index) * 2);
 		}
 
@@ -20,26 +19,10 @@
 
 	&__col {
 
-		@media (max-width: 768px) {
-
-			&:first-child {
-				width: 100%;
-				margin-bottom: calc(var(--index) * 2);
-			}
-		}
-
-		@media (min-width: 769px) {
-			
-			&:last-child {
-				text-align: right;
-			}
-		}
-
 		@media (min-width: 990px) {
 			display: flex;
 			align-items: center;
 			margin-bottom: 0;
-			gap: 10px;
 		}
 	} // /__col
 
@@ -49,7 +32,7 @@
 
 	.socials {
 
-		display: inline-flex;
+		display: flex;
 		gap: calc(var(--index) * 2);
 
 		&__item {
@@ -59,7 +42,7 @@
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: 100%;
-			transition: .3s;
+			transition: background-image .3s;
 
 			&.tg { background-image: url('../images/dest/socials/tg.svg'); }
 			&.vk { background-image: url('../images/dest/socials/vk.svg'); }
@@ -70,6 +53,11 @@
 			&.vk:hover { background-image: url('../images/dest/socials/vk_active.svg'); }
 			&.dc:hover { background-image: url('../images/dest/socials/dc_active.svg'); }
 			&.yt:hover { background-image: url('../images/dest/socials/yt_active.svg'); }
+		
+			@media (min-width: 375px) and (max-width: 768px) {
+				width: calc(var(--index) * 3);
+				height: calc(var(--index) * 3);
+			}
 		}
 	}
 }

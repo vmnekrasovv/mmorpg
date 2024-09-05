@@ -160,7 +160,7 @@
 		font-family: 'OpenSans';
 		text-decoration: none;
 
-		transition: .3s;
+		transition: background .3s, color .3s;
 
 		&:hover {
 			background-color: $blue_33;
@@ -277,15 +277,6 @@
 
 	&.active {
 		right: 0;
-		// animation: show .33s linear;
-	}
-
-	@keyframes show {
-		0% { opacity: 0; right: -200vw;}
-		50% { opacity: 0; right: -30vw; }
-		70% { opacity: 0; right: -20vw; }
-		99% { opacity: .2; right: 0;}
-		100% { opacity: 1; right: 0; }
 	}
 
 	
@@ -342,8 +333,6 @@
         	font-size: calc(var(--index)* 1.7);
 			text-align: center;
 			border-bottom: calc(var(--index)* .4) solid $dark_1e;
-
-			animation: show .7s ease-in;
 		}
 		
 
