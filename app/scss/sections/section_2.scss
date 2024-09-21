@@ -40,8 +40,10 @@
 		}
 
 		&-info {
-			padding: calc(var(--index));
-			display: block;
+			height: 10vh;
+			padding-left: calc(var(--index));
+			display: flex;
+			align-items: center;
 		}
 
 		&-title {
@@ -49,9 +51,16 @@
 			font-family: 'Montserrat';
 			font-weight: 500;
 			font-size: calc(var(--index));
-			line-height: calc(var(--index));
 			letter-spacing: .15px;
 			color: $white_f9;
+
+			@media (max-width: 990px) {
+				font-size: calc(var(--index) * 1.4);
+			}
+
+			@media (max-width: 768px) {
+				font-size: calc(var(--index) * 1.5);
+			}
 		}
 
 		&-cost {

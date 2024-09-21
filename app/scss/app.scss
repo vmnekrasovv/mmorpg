@@ -65,10 +65,17 @@ body.lock {
 }
 
 .section {
+
+	//display: none;
+
 	padding: calc(var(--index) * 4) 0 calc(var(--index) * 7);
 
 	@media (max-width: 990px) {
 		padding: calc(var(--index) * 4) 0 calc(var(--index) * 5);
+	}
+
+	&.active {
+		display: block;
 	}
 }
 
@@ -81,6 +88,10 @@ body.lock {
 	color: $white_e9;
 	text-align: center;
 	text-transform: uppercase;
+
+	@media (max-width: 576px) {
+		font-size: calc(var(--index) * 2.5);
+	}
 }
 
 @import 'header';
